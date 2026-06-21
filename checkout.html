@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Beauty Home — мебель на заказ в Бишкеке</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style2.css">
+  <link rel="icon" href="Logo.ico">
+
+
+<meta
+name="description"
+content="Мебель на заказ в Бишкеке. Кровати, диваны, стулья, столы, тумбы, консоли, банкетки и другая мебель от Beauty Home."
+>
+
+<meta
+name="keywords"
+content="мебель Бишкек, мебель на заказ Бишкек, кровати Бишкек, диваны Бишкек, стулья Бишкек, столы Бишкек, тумбы Бишкек, пуфы Бишкек, консоли Бишкек, тумбы Бишкек, мебель Кыргызстан, мебель на заказ Кыргызстан, кровати Кыргызстан, диваны Кыргызстан, стулья Кыргызстан, столы Кыргызстан, тумбы Кыргызстан, пуфы Кыргызстан, консоли Кыргызстан, тумбы Кыргызстан"
+>
+</head>
+
+<body>
+
+  <header class="header">
+
+  <a href="index.html" class="logo-wrap homeLink">
+
+    <img
+      src="images/Logo.png"
+      alt="Beauty Home"
+      class="logo-img"
+    >
+
+    <span class="logo">
+      Beauty Home
+    </span>
+
+  </a>
+
+<div class="search-box">
+
+  <input
+    type="text"
+    class="search"
+    id="headerSearch"
+    placeholder="Поиск мебели..."
+    data-placeholder="searchPlaceholder"
+  >
+
+  <button id="searchBtn" class="search-btn">
+    🔍
+  </button>
+
+</div>
+
+
+  <nav class="nav">
+  <a href="index.html" class="nav-link homeLink" data-lang="home">Главная</a>
+  <a href="index.html#catalog" class="nav-link" id="catalogLink" data-lang="catalog">Каталог</a>
+  <a href="checkout.html" class="nav-link" data-lang="cart">Корзина</a>
+  <a href="services.html" class="nav-link" data-lang="services">Услуги</a>
+  <a href="delivery.html" class="nav-link" data-lang="delivery">Доставка</a>
+  <a href="contacts.html" class="nav-link" data-lang="contacts">Контакты</a>
+</nav>
+
+  <div class="header-right">
+    <a href="tel:+996555123456" class="phone-header">
+      📞 +996 555 123 456
+    </a>
+
+    <div class="lang-switcher">
+  <button id="ruBtn">RU</button>
+  <button id="kgBtn">KG</button>
+</div>
+  </div>
+</header>
+
+<a href="index.html" class="back-btn"
+data-ru="← На главную"
+data-kg="← Башкы бетке">
+← На главную
+</a>
+
+<h1
+data-ru="Оформление заказа"
+data-kg="Буйрутманы тариздөө">
+Оформление заказа
+</h1>
+
+<div class="order-box">
+
+  <!-- КОРЗИНА -->
+  <h3
+data-ru="Ваш заказ"
+data-kg="Сиздин буйрутмаңыз">
+Ваш заказ
+</h3>
+  <ul id="cartItems"></ul>
+
+  <button class="clear-btn" onclick="clearCart()"
+data-ru="Очистить корзину"
+data-kg="Себетти тазалоо">
+Очистить корзину
+</button>
+
+  <!-- ИТОГО -->
+  <!-- ИТОГО -->
+<p>
+
+<span
+data-ru="Итого:"
+data-kg="Жалпы:">
+Итого:
+</span>
+
+<span id="totalPrice">
+0
+</span>
+
+сом
+
+</p>
+
+</div>
+
+<!-- ФОРМА -->
+<form id="orderForm" class="order-form">
+
+  <h3
+data-ru="Данные получателя"
+data-kg="Алуучунун маалыматы">
+Данные получателя
+</h3>
+
+  <input 
+type="text"
+id="customerName"
+placeholder="Ваше имя"
+data-ru-placeholder="Ваше имя"
+data-kg-placeholder="Атыңыз"
+required>
+
+  <input 
+type="tel"
+id="customerPhone"
+placeholder="Номер телефона"
+data-ru-placeholder="Номер телефона"
+data-kg-placeholder="Телефон номери"
+required>
+
+  <input 
+type="text"
+id="customerAddress"
+placeholder="Город / адрес доставки"
+data-ru-placeholder="Город / адрес доставки"
+data-kg-placeholder="Шаар / жеткирүү дареги"
+required>
+
+  <textarea
+placeholder="Комментарий (необязательно)"
+id="customerComment"
+data-ru-placeholder="Комментарий (необязательно)"
+data-kg-placeholder="Комментарий (милдеттүү эмес)">
+</textarea>
+
+  <button type="submit"
+data-ru="Подтвердить заказ"
+data-kg="Буйрутманы ырастоо">
+Подтвердить заказ
+</button>
+
+</form>
+
+<!-- РЕЗУЛЬТАТ -->
+<div id="result"></div>
+
+
+<!-- ОПЛАТА -->
+<div class="order-box" style="display:none;">
+
+  <h3
+data-ru="Оплата"
+data-kg="Төлөм">
+Оплата
+</h3>
+
+  <button 
+id="payBtn"
+onclick="pay()"
+data-ru="Оплатить картой"
+data-kg="Карта менен төлөө">
+
+Оплатить картой
+
+</button>
+
+</div>
+
+<div id="paymentResult"></div>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+<script src="js/checkout.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beauty Home — мебель на заказ в Бишкеке</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="Logo.ico">
+
+  <meta
+name="description"
+content="Мебель на заказ в Бишкеке. Кровати, диваны, стулья, столы, тумбы, консоли, банкетки и другая мебель от Beauty Home."
+>
+
+<meta
+name="keywords"
+content="мебель Бишкек, мебель на заказ Бишкек, кровати Бишкек, диваны Бишкек, стулья Бишкек, столы Бишкек, тумбы Бишкек, пуфы Бишкек, консоли Бишкек, тумбы Бишкек, мебель Кыргызстан, мебель на заказ Кыргызстан, кровати Кыргызстан, диваны Кыргызстан, стулья Кыргызстан, столы Кыргызстан, тумбы Кыргызстан, пуфы Кыргызстан, консоли Кыргызстан, тумбы Кыргызстан"
+>
+
+<meta name="google-site-verification" content="RhMk5hppVg9v2yxtpv6bG88JoqEgc7N-xKo7e0B7oZU" />
+<meta name="yandex-verification" content="eaa19181f88e6951" />
+
+</head>
+
+<body>
+
+<header class="header">
+
+  <a href="index.html" class="logo-wrap homeLink">
+
+    <img
+      src="images/Logo.png"
+      alt="Beauty Home"
+      class="logo-img"
+    >
+
+    <span class="logo">
+      Beauty Home
+    </span>
+
+  </a>
+
+<div class="search-box">
+
+  <input
+    type="text"
+    class="search"
+    id="headerSearch"
+    placeholder="Поиск мебели..."
+    data-placeholder="searchPlaceholder"
+  >
+
+  <button id="searchBtn" class="search-btn">
+    🔍
+  </button>
+
+</div>
+
+
+  <nav class="nav">
+  <a href="#" class="nav-link homeLink" data-lang="home">Главная</a>
+  <a href="#catalog" class="nav-link" id="catalogLink" data-lang="catalog">Каталог</a>
+  <a href="checkout.html" class="nav-link" data-lang="cart">Корзина</a>
+  <a href="services.html" class="nav-link" data-lang="services">Услуги</a>
+  <a href="delivery.html" class="nav-link" data-lang="delivery">Доставка</a>
+  <a href="contacts.html" class="nav-link" data-lang="contacts">Контакты</a>
+</nav>
+
+  <div class="header-right">
+    <a href="tel:+996555123456" class="phone-header">
+      📞 +996 555 123 456
+    </a>
+
+    <div class="lang-switcher">
+  <button id="ruBtn">RU</button>
+  <button id="kgBtn">KG</button>
+</div>
+  </div>
+</header>
+
+<!-- <section class="hero">
+  <h1>Мебель для дома</h1>
+  <p>Каталог качественной мебели по низким ценам</p>
+</section> -->
+
+<section class="big-banner">
+  <div>
+    <h1 id="bannerTitle" data-lang="bannerTitle">Создайте дом своей мечты</h1>
+    <p id="bannerText" data-lang="bannerText">Современная мебель для комфортной жизни</p>
+    <button id="bannerCatalogBtn" data-lang="bannerBtn">Смотреть каталог</button>
+  </div>
+</section>
+
+<section class="about-company">
+
+  <div class="about-image">
+    <img src="images/About us.jpg" alt="Beauty Home">
+  </div>
+
+  <div class="about-content">
+    <h2 data-lang="aboutTitle">О компании Beauty Home</h2>
+
+    <p data-lang="aboutText1">
+      Beauty Home — это современная мебель для дома,
+      созданная с заботой о комфорте и стиле.
+    </p>
+
+    <p data-lang="aboutTitle">
+      Мы предлагаем кровати, диваны, консоли,
+      тумбы, столики и другую мебель высокого качества
+      по доступным ценам.
+    </p>
+
+    <p data-lang="aboutText3">
+      Наша цель — помочь каждому клиенту создать
+      уютный интерьер своей мечты.
+    </p>
+  </div>
+
+</section>
+
+<!-- <section class="lifestyle">
+  <div class="lifestyle-text">
+    <h2>Живите красиво</h2>
+    <p>Мебель, которая создаёт атмосферу уюта и стиля</p>
+  </div> -->
+
+  <!-- <img src="images/lifestyle.jpg"> -->
+</section>
+
+<section class="story">
+
+  <h2 data-lang="whyUs">
+    Почему выбирают нас
+  </h2>
+
+  <div class="story-grid">
+
+    <div data-lang="adv1">
+      🛋 Качественная мебель
+    </div>
+
+    <div data-lang="adv2">
+      🚚 Быстрая доставка
+    </div>
+
+    <div data-lang="adv3">
+      💰 Доступные цены
+    </div>
+
+    <div data-lang="adv4">
+      🛠 Гарантия 1 год
+    </div>
+
+  </div>
+
+</section>
+
+<section class="catalog" id="catalog">
+
+  <aside class="filters">
+    <h3 data-lang="filters">Фильтры</h3>
+
+<input type="text"
+id="searchInput"
+placeholder="Поиск товара"
+data-placeholder="productSearch">
+
+<select id="categoryFilter">
+  <option value="">Все категории</option>
+
+  <option value="Диваны">Диваны</option>
+  <option value="Кровати">Кровати</option>
+  <option value="Кресла и стулья">Кресла и стулья</option>
+
+  <option value="Тумбы">Тумбы</option>
+  <option value="Прикроватные тумбы">Прикроватные тумбы</option>
+  <option value="ТВ-Тумбы">ТВ-Тумбы</option>
+
+  <option value="Консоли">Консоли</option>
+  <option value="Подвесные консоли">Подвесные консоли</option>
+
+  <option value="Столики">Столики</option>
+  <option value="Туалетные столики">Туалетные столики</option>
+
+  <option value="Банкетки">Банкетки</option>
+  <option value="Пуфы">Пуфы</option>
+  <option value="Пуфы будуарные">Пуфы будуарные</option>
+</select>
+
+<input
+type="number"
+id="minPrice"
+placeholder="Цена от"
+data-placeholder="priceFrom">
+
+<input
+type="number"
+id="maxPrice"
+placeholder="Цена до"
+data-placeholder="priceTo">
+
+<select id="sortPrice">
+  <option value="">Без сортировки</option>
+  <option value="asc">Цена ↑</option>
+  <option value="desc">Цена ↓</option>
+</select>
+
+<button id="applyFilters" data-lang="apply">
+Применить
+</button>
+
+<button id="resetFilters" data-lang="reset">
+Сбросить
+</button>
+  </aside>
+
+  <div class="products" id="products">
+
+<div class="skeleton-grid" id="skeleton">
+  <div class="skeleton-card"></div>
+  <div class="skeleton-card"></div>
+  <div class="skeleton-card"></div>
+  <div class="skeleton-card"></div>
+</div>
+
+  <div class="card" data-id="1" data-price="16000" data-category="Банкетки">
+    
+    <div class="slider">
+      <button class="prev">←</button>
+
+      <div class="track">
+        <img src="images/Банкетки/Банкетка 1.jpg" alt="Банкетка 1">
+        <img src="images/Банкетки/Банкетка 2.jpg" alt="Банкетка 2">
+        <img src="images/Банкетки/Банкетка 3.jpg" alt="Банкетка 3">
+        <img src="images/Банкетки/Банкетка 4.jpg" alt="Банкетка 4">
+        <img src="images/Банкетки/Банкетка 5.jpg" alt="Банкетка 5">
+        <img src="images/Банкетки/Банкетка 6.jpg" alt="Банкетка 6">
+        <img src="images/Банкетки/Банкетка 7.jpg" alt="Банкетка 7">
+
+      </div>
+
+      <button class="next">→</button>
+    </div>
+
+    <h3 class="product-title"
+data-ru="Банкетки"
+data-kg="Отургучтар">
+Банкетки
+</h3>
+
+<p>16 000 сом</p>
+
+<button class="add-cart-btn"
+onclick="addToCart('Банкетки',16000,'images/Банкетки/Банкетка 1.jpg')">
+
+<span
+data-ru="В корзину"
+data-kg="Себетке кошуу">
+В корзину
+</span>
+
+</button>
+
+  </div>
+
+
+
+    <div class="card" data-id="2" data-price="16000" data-category="Пуфы будуарные">
+    
+    <div class="slider">
+      <button class="prev">←</button>
+
+      <div class="track">
+        <img src="images/Пуфы будуарные/Пуф 1.jpg" alt="Пуф будуарный 1">
+        <img src="images/Пуфы будуарные/Пуф 2.jpg" alt="Пуф будуарный 2">
+        <img src="images/Пуфы будуарные/Пуф 3.jpg" alt="Пуф будуарный 3">
+        <img src="images/Пуфы будуарные/Пуф 4.jpg" alt="Пуф будуарный 4">
+        <img src="images/Пуфы будуарные/Пуф 5.jpg" alt="Пуф будуарный 5">
+        
+
+
+      </div>
+
+      <button class="next">→</button>
+    </div>
+
+    <h3 class="product-title"
+data-ru="Пуфы будуарные"
+data-kg="Будуардук пуфтар">
+Пуфы будуарные
+</h3>
+
+<p>16 000 сом</p>
+
+<button class="add-cart-btn"
+onclick="addToCart('Пуфы будуарные',16000,'images/Пуфы будуарные/Пуф 1.jpg')">
+
+<span
+data-ru="В корзину"
+data-kg="Себетке кошуу">
+В корзину
+</span>
+
+</button>
+
+  </div>
+
+  <div class="card" data-id="3" data-price="16000" data-category="Туалетные столики">
+    
+    <div class="slider">
+      <button class="prev">←</button>
+
+      <div class="track">
+        <img src="images/Туалетные столики/Столик 2.jpg" alt="Столик туалетный 1">
+        <img src="images/Туалетные столики/Столик 3.jpg" alt="Столик туалетный 2 ">
+        <img src="images/Туалетные столики/Столик 1.jpg" alt="Столик туалетный 3">
+        <img src="images/Туалетные столики/Столик 4.jpg" alt="Столик туалетный 4">
+        <img src="images/Туалетные столики/Столик 5.jpg" alt="Столик туалетный 5">
+        <img src="images/Туалетные столики/Столик 6.jpg" alt="Столик туалетный 6">
+        <img src="images/Туалетные столики/Столик 7.jpg" alt="Столик туалетный 7">
+        <img src="images/Туалетные столики/Столик 8.jpg" alt="Столик туалетный 8">
+        <img src="images/Туалетные столики/Столик 9.jpg" alt="Столик туалетный 9">
+        <img src="images/Туалетные столики/Столик 10.jpg" alt="Столик туалетный 10">
+        <img src="images/Туалетные столики/Столик 11.jpg" alt="Столик туалетный 11">
+        
+
+        
+
+      </div>
+
+      <button class="next">→</button>
+    </div>
+
+    <h3 class="product-title"
+data-ru="Туалетные столики"
+data-kg="Косметикалык столдор">
+Туалетные столики
+</h3>
+
+<p>16 000 сом</p>
+
+<button class="add-cart-btn"
+onclick="addToCart('Туалетные столики',16000,'images/Туалетные столики/Столик 2.jpg')">
+
+<span
+data-ru="В корзину"
+data-kg="Себетке кошуу">
+В корзину
+</span>
+
+</button>
+
+  </div>
+
+  <div class="card" data-id="4" data-price="43500" data-category="Кровати">
+    
+    <div class="slider">
+      <button class="prev">←</button>
+
+      <div class="track">
+        <img src="images/Кровати/Кровать 1.jpg" alt="Кровать 1">
+        <img src="images/Кровати/Кровать 2.jpg" alt="Кровать 2">
+        <img src="images/Кровати/Кровать 3.jpg" alt="Кровать 3">
+        <img src="images/Кровати/Кровать 4.jpg" alt="Кровать 4">
+        <img src="images/Кровати/Кровать 5.jpg" alt="Кровать 5">
+        <img src="images/Кровати/Кровать 6.jpg" alt="Кровать 6">
+        
+
+      </div>
+
+      <button class="next">→</button>
+    </div>
+
+    <h3 class="product-title"
+data-ru="Кровати"
+data-kg="Керебеттер">
+Кровати
+</h3>
+
+<p>43 500 сом</p>
+
+<button class="add-cart-btn"
+onclick="addToCart('Кровати',43500,'images/Кровати/Кровать 1.jpg')">
+
+<span
+data-ru="В корзину"
+data-kg="Себетке кошуу">
+В корзину
+</span>
+
+</button>
+
+  </div>
+
+  <div class="card" data-id="5" data-price="43500" data-category="Консоли">
+    
+    <div class="slider">
+      <button class="prev">←</button>
+
+      <div class="track">
+        <img src="images/Консоли/Консоль 1.jpg" alt="Консоль 1">
+        <img src="images/Консоли/Консоль 2.jpg" alt="Консоль 2">
+        <img src="images/Консоли/Консоль 6.jpg" alt="Консоль 3">
+        <img src="images/Консоли/Консоль 3.jpg" alt="Консоль 4">
+        <img src="images/Консоли/Консоль 4.jpg" alt="Консоль 5">
+        <img src="images/Консоли/Консоль 5.jpg" alt="Консоль 6">
+
+        
+
+      </div>
+
+      <button class="next">→</button>
+    </div>
+
+    <h3 class="product-title"
+data-ru="Консоли"
+data-kg="Консолдор">
+Консоли
+</h3>
+
+<p>43 500 сом</p>
+
+<button class="add-cart-btn"
+onclick="addToCart('Консоли',43500,'images/Консоли/Консоль 1.jpg')">
+
+<span
+data-ru="В корзину"
+data-kg="Себетке кошуу">
+В корзину
+</span>
+
+</button>
+
+  </div>
+
+  <div class="card" data-id="6" data-price="23500" data-category="Кресла и стулья">
+    
+    <div class="slider">
+      <button class="prev">←</button>
+
+      <div class="track">
+        <img src="images/Кресла и стулья/Стул 1.jpg" alt="Стул 1">
+        <img src="images/Кресла и стулья/Стул 2.jpg" alt="Стул 2">
+        <img src="images/Кресла и стулья/Стул 3.jpg" alt="Стул 3">
+        <img src="images/Кресла и стулья/Стул 4.jpg" alt="Стул 4">
+        <img src="images/Кресла и стулья/Стул 5.jpg" alt="Стул 5">
+        <img src="images/Кресла и стулья/Стул 6.jpg" alt="Стул 6">
+
+        
+
+      </div>
+
+      <button class="next">→</button>
+    </div>
+
+    <h3 class="product-title"
+data-ru="Кресла и стулья"
+data-kg="Креслолор жана отургучтар">
+Кресла и стулья
+</h3>
+
+<p>23 500 сом</p>
+
+<button class="add-cart-btn"
+onclick="addToCart('Кресла и стулья',23500,'images/Кресла и стулья/Стул 1.jpg')">
+
+<span
+data-ru="В корзину"
+data-kg="Себетке кошуу">
+В корзину
+</span>
+
+</button>
+
+  </div>
+
+  <div class="card" data-id="7" data-price="23500" data-category="Диваны">
+    
+    <div class="slider">
+      <button class="prev">←</button>
+
+      <div class="track">
+        <img src="images/Диваны/Диван 1.jpg" alt="Диван 1">
+        <img src="images/Диваны/Диван 2.jpg" alt="Диван 2">
+        <img src="images/Диваны/Диван 3.jpg" alt="Диван 3">
+        <img src="images/Диваны/Диван 4.jpg" alt="Диван 4">
+        <img src="images/Диваны/Диван 5.jpg" alt="Диван 5">
+        <img src="images/Диваны/Диван 6.jpg" alt="Диван 6">
+        <img src="images/Диваны/Диван 7.jpg" alt="Диван 7">
+        <img src="images/Диваны/Диван 8.jpg" alt="Диван 8">
+        <img src="images/Диваны/Диван 9.jpg" alt="Диван 9">
+
+        
+
+      </div>
+
+      <button class="next">→</button>
+    </div>
+
+    <h3 class="product-title"
+data-ru="Диваны"
+data-kg="Дивандар">
+Диваны
+</h3>
+
+<p>23 500 сом</p>
+
+<button class="add-cart-btn"
+onclick="addToCart('Диваны',23500,'images/Диваны/Диван 1.jpg')">
+
+<span
+data-ru="В корзину"
+data-kg="Себетке кошуу">
+В корзину
+</span>
+
+</button>
+
+  </div>
+
+  <div class="card" data-id="8" data-price="23500" data-category="Тумбы">
+    
+    <div class="slider">
+      <button class="prev">←</button>
+
+      <div class="track">
+        <img src="images/Тумбы/Тумба 1.jpg" alt="Тумба 1">
+        <img src="images/Тумбы/Тумба 2.jpg" alt="Тумба 2">
+        <img src="images/Тумбы/Тумба 3.jpg" alt="Тумба 3">
+        <img src="images/Тумбы/Тумба 4.jpg" alt="Тумба 4">
+        <img src="images/Тумбы/Тумба 5.jpg" alt="Тумба 5">
+
+
+        
+
+      </div>
+
+      <button class="next">→</button>
+    </div>
+
+    <h3 class="product-title"
+data-ru="Тумбы"
+data-kg="Тумбалар">
+Тумбы
+</h3>
+
+<p>23 500 сом</p>
+
+<button class="add-cart-btn"
+onclick="addToCart('Тумбы',23500,'images/Тумбы/Тумба 1.jpg')">
+
+<span
+data-ru="В корзину"
+data-kg="Себетке кошуу">
+В корзину
+</span>
+
+</button>
+
+  </div>
+
+  <div class="card" data-id="9" data-price="23500" data-category="Столики">
+    
+    <div class="slider">
+      <button class="prev">←</button>
+
+      <div class="track">
+        <img src="images/Столики/Столики 1.jpg" alt="Столик 1">
+        <img src="images/Столики/Столики 2.jpg" alt="Столик 2">
+        <img src="images/Столики/Столики 3.jpg" alt="Столик 3">
+        <img src="images/Столики/Столики 4.jpg" alt="Столик 4">
+        <img src="images/Столики/Столики 5.jpg" alt="Столик 5">
+        <img src="images/Столики/Столики 6.jpg" alt="Столик 6">
+        <img src="images/Столики/Столик 7.jpg" alt="Столик 7">
+        <img src="images/Столики/Столик 8.jpg" alt="Столик 8">
+        <img src="images/Столики/Столик 9.jpg" alt="Столик 9">
+        <img src="images/Столики/Столик 10.jpg" alt="Столик 10">
+        <img src="images/Столики/Столик 11.jpg" alt="Столик 11">
+        <img src="images/Столики/Столик 12.jpg" alt="Столик 12">
+
+
+        
+
+      </div>
+
+      <button class="next">→</button>
+    </div>
+
+    <h3 class="product-title"
+data-ru="Столики"
+data-kg="Столиктер">
+Столики
+</h3>
+
+<p>23 500 сом</p>
+
+<button class="add-cart-btn"
+onclick="addToCart('Столики',23500,'images/Столики/Столики 1.jpg')">
+
+<span
+data-ru="В корзину"
+data-kg="Себетке кошуу">
+В корзину
+</span>
+
+</button>
+
+  </div>
+
+  <div class="card" data-id="10" data-price="23500" data-category="Пуфы">
+    
+    <div class="slider">
+      <button class="prev">←</button>
+
+      <div class="track">
+        <img src="images/Пуфы/Пуф 1.jpg" alt="Пуф 1">
+        <img src="images/Пуфы/Пуф 2.jpg" alt="Пуф 2">
+        <img src="images/Пуфы/Пуф 3.jpg" alt="Пуф 3">
+  
+
+
+
+        
+
+      </div>
+
+      <button class="next">→</button>
+    </div>
+
+    <h3 class="product-title"
+data-ru="Пуфы"
+data-kg="Пуфтар">
+Пуфы
+</h3>
+
+<p>23 500 сом</p>
+
+<button class="add-cart-btn"
+onclick="addToCart('Пуфы',23500,'images/Пуфы/Пуф 1.jpg')">
+
+<span
+data-ru="В корзину"
+data-kg="Себетке кошуу">
+В корзину
+</span>
+
+</button>
+
+  </div>
+
+  <div class="card" data-id="11" data-price="23500" data-category="Подвесные консоли">
+    
+    <div class="slider">
+      <button class="prev">←</button>
+
+      <div class="track">
+        <img src="images/Подвесные консоли/Консоль 2.jpg" alt="Подвесная консоль 1">
+        <img src="images/Подвесные консоли/Консоль 3.jpg" alt="Подвесная консоль 2">
+        <img src="images/Подвесные консоли/Консоль 4.jpg" alt="Подвесная консоль 3">
+        <img src="images/Подвесные консоли/Консоль 5.jpg" alt="Подвесная консоль 4">
+        <img src="images/Подвесные консоли/Консоль 6.jpg" alt="Подвесная консоль 5">
+        <img src="images/Подвесные консоли/Консоль 1.jpg" alt="Подвесная консоль 6">
+
+        
+
+
+
+
+        
+
+      </div>
+
+      <button class="next">→</button>
+    </div>
+
+    <h3 class="product-title"
+data-ru="Подвесные консоли"
+data-kg="Илме консолдор">
+Подвесные консоли
+</h3>
+
+<p>23 500 сом</p>
+
+<button class="add-cart-btn"
+onclick="addToCart('Подвесные консоли',23500,'images/Подвесные консоли/Консоль 2.jpg')">
+
+<span
+data-ru="В корзину"
+data-kg="Себетке кошуу">
+В корзину
+</span>
+
+</button>
+
+  </div>
+
+  <div class="card" data-id="12" data-price="21000" data-category="Прикроватные тумбы">
+    
+    <div class="slider">
+      <button class="prev">←</button>
+
+      <div class="track">
+        <img src="images/Прикроватные тумбы/Тумба 1.jpg" alt="Прикроватная тумба 1">
+        <img src="images/Прикроватные тумбы/Тумба 2.jpg" alt="Прикроватная тумба 2">
+        <img src="images/Прикроватные тумбы/Тумба 3.jpg" alt="Прикроватная тумба 3">
+        <img src="images/Прикроватные тумбы/Тумба 4.jpg" alt="Прикроватная тумба 4">
+        <img src="images/Прикроватные тумбы/Тумба 5.jpg" alt="Прикроватная тумба 5">
+        <img src="images/Прикроватные тумбы/Тумба 6.jpg" alt="Прикроватная тумба 6">
+        <img src="images/Прикроватные тумбы/Тумба 7.jpg" alt="Прикроватная тумба 7">
+
+
+
+
+        
+
+      </div>
+
+      <button class="next">→</button>
+    </div>
+
+    <h3 class="product-title"
+data-ru="Прикроватные тумбы"
+data-kg="Керебет жанындагы тумбалар">
+Прикроватные тумбы
+</h3>
+
+<p>21 000 сом</p>
+
+<button class="add-cart-btn"
+onclick="addToCart('Прикроватные тумбы',21000,'images/Прикроватные тумбы/Тумба 1.jpg')">
+
+<span
+data-ru="В корзину"
+data-kg="Себетке кошуу">
+В корзину
+</span>
+
+</button>
+
+  </div>
+
+  <div class="card" data-id="13" data-price="21000" data-category="ТВ-Тумбы">
+    
+    <div class="slider">
+      <button class="prev">←</button>
+
+      <div class="track">
+        <img src="images/ТВ тумбы/Тумба 1.jpg" alt="ТВ-Тумба 1">
+        <img src="images/ТВ тумбы/Тумба 2.jpg" alt="ТВ-Тумба 2">
+        <img src="images/ТВ тумбы/Тумба 3.jpg" alt="ТВ-Тумба 3">
+        <img src="images/ТВ тумбы/Тумба 4.jpg" alt="ТВ-Тумба 4">
+
+
+
+
+
+        
+
+      </div>
+
+      <button class="next">→</button>
+    </div>
+
+    <h3 class="product-title"
+data-ru="ТВ-Тумбы"
+data-kg="ТВ тумбалар">
+ТВ-Тумбы
+</h3>
+
+<p>21 000 сом</p>
+
+<button class="add-cart-btn"
+onclick="addToCart('ТВ-Тумбы',21000,'images/ТВ тумбы/Тумба 1.jpg')">
+
+<span
+data-ru="В корзину"
+data-kg="Себетке кошуу">
+В корзину
+</span>
+
+</button>
+
+
+
+  
+
+  
+
+</section>
+<div id="toast"></div>
+<!-- overlay (фон затемнения) -->
+<div id="overlay" onclick="closeFilters()"></div>
+
+<!-- боковые фильтры -->
+<aside id="sidebarFilters">
+  <h3>Фильтры</h3>
+
+  <input type="text" id="searchInput" placeholder="Поиск товара">
+
+  <select id="categoryFilter">
+    <option value="">Все категории</option>
+    <option value="Диваны">Диваны</option>
+    <option value="Кровати">Кровати</option>
+    <option value="Кресла и стулья">Кресла и стулья</option>
+    <option value="Тумбы">Тумбы</option>
+    <option value="Прикроватные тумбы">Прикроватные тумбы</option>
+    <option value="ТВ-Тумбы">ТВ-Тумбы</option>
+    <option value="Консоли">Консоли</option>
+    <option value="Столики">Столики</option>
+    <option value="Пуфы">Пуфы</option>
+  </select>
+
+  <input type="number" id="minPrice" placeholder="Цена от">
+  <input type="number" id="maxPrice" placeholder="Цена до">
+
+  <button onclick="applyFilters()">Применить</button>
+  <button onclick="resetFilters()">Сбросить</button>
+</aside>
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

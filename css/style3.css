@@ -1,0 +1,382 @@
+/* =========================
+   PRODUCT PAGE ONLY (CLEAN)
+========================= */
+
+/* НЕ ТРОГАЕМ HEADER — он в style.css */
+
+/* =========================
+   BODY
+========================= */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  color: #1c1f26;
+}
+
+/* =========================
+   PAGE WRAPPER
+========================= */
+
+.product-page {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* скрытие страницы (JS загрузка) */
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.product-hero {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-hero h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.product-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* =========================
+   MAIN IMAGE
+========================= */
+
+.main-image img {
+  width: 100%;
+  height: 450px;
+  object-fit: contain;
+
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+/* =========================
+   THUMBNAILS
+========================= */
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.thumbnails img {
+  width: 75px;
+  height: 75px;
+
+  object-fit: cover;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  border: 2px solid transparent;
+  background: #fff;
+
+  transition: 0.2s;
+}
+
+.thumbnails img:hover {
+  transform: scale(1.06);
+  border-color: #2563eb;
+}
+
+.thumbnails img.active {
+  border-color: #111;
+  transform: scale(1.06);
+}
+
+/* =========================
+   INFO BLOCK
+========================= */
+
+.product-info {
+  margin-top: 20px;
+
+  background: #fff;
+  padding: 20px;
+
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.description {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.product-info ul {
+  padding-left: 18px;
+  margin-bottom: 20px;
+}
+
+.product-info li {
+  margin-bottom: 6px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.product-info button {
+  width: 100%;
+  padding: 12px;
+
+  background: #111;
+  color: #fff;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+  margin-bottom: 10px;
+
+  transition: 0.2s;
+}
+
+.product-info button:hover {
+  background: #333;
+}
+
+/* WhatsApp */
+.whatsapp-btn {
+  display: block;
+  text-align: center;
+
+  padding: 12px;
+  border-radius: 8px;
+
+  background: #25d366;
+  color: #fff;
+
+  text-decoration: none;
+  font-weight: bold;
+
+  transition: 0.2s;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebd57;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .main-image img {
+    height: 300px;
+  }
+
+  .thumbnails {
+    justify-content: center;
+  }
+
+  .thumbnails img {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+/* =========================
+   FIX HEADER ONLY FOR PRODUCT PAGE
+========================= */
+
+.product-body .header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 14px 20px;
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.product-body .nav {
+  display: flex;
+  gap: 20px;
+}
+
+.product-body .nav a {
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  color: #111 !important;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.product-body .nav a:hover {
+  color: #2563eb;
+}
+
+.product-body .search-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.product-body .search {
+  width: 400px;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.product-body .search-btn {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  cursor: pointer;
+
+  background: #2563eb;
+  color: white;
+
+  border-radius: 8px;
+}
+
+.product-body .phone-header {
+  color: #1c1f26;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* =========================
+   CHECKOUT RESPONSIVE
+========================= */
+
+
+@media (max-width: 768px) {
+
+
+  h1 {
+
+    font-size: 24px;
+    margin-top: 25px;
+
+  }
+
+
+
+  .order-box,
+  .order-form,
+  #result,
+  #paymentResult {
+
+    width: calc(100% - 30px);
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+
+
+  .order-box,
+  .order-form {
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+  }
+
+
+
+  #cartItems > div {
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+  }
+
+
+
+  #cartItems > div > div:last-child {
+
+    width: 100%;
+    justify-content: space-between;
+
+  }
+
+
+}
+
+
+
+@media (max-width: 480px) {
+
+
+  h1 {
+
+    font-size: 20px;
+
+  }
+
+
+
+  .order-box,
+  .order-form {
+
+    padding: 15px;
+
+  }
+
+
+
+  .back-btn {
+
+    font-size: 14px;
+
+  }
+
+
+
+  #cartItems button {
+
+    width: 30px;
+    height: 30px;
+
+  }
+
+
+}

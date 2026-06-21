@@ -1,0 +1,370 @@
+/* =========================
+   CHECKOUT ONLY (FIXED)
+========================= */
+
+/* ❗ ВАЖНО: убрали flex с body, он ломал header */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #e4e8f0);
+}
+
+/* ===== PAGE TITLE ===== */
+h1 {
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 28px;
+  color: #222;
+}
+
+/* ===== BACK BUTTON ===== */
+.back-btn {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+/* ===== CENTER WRAPPER ONLY FOR CONTENT ===== */
+.order-box,
+.order-form,
+#result,
+#paymentResult {
+  width: 100%;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== ORDER BOX ===== */
+.order-box {
+  margin: 20px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== CART ===== */
+
+#cartItems {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+#cartItems > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+#cartItems > div:last-child {
+  border-bottom: none;
+}
+
+#cartItems > div > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#cartItems > div > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Кнопки + - X */
+
+#cartItems button {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+
+#cartItems button:first-child,
+#cartItems button:nth-child(3) {
+  background: #2d89ef;
+  color: white;
+}
+
+#cartItems button:last-child {
+  background: #ff4d4d;
+  color: white;
+}
+
+/* ===== TOTAL ===== */
+.order-box p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== FORM ===== */
+.order-form {
+  margin: 20px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.order-form input,
+.order-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+/* ===== RESULT ===== */
+#result,
+#paymentResult {
+  display: none;
+  margin: 15px auto;
+  padding: 15px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+/* ===== CLEAR BUTTON ===== */
+.clear-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+/* =========================
+   PRODUCT RESPONSIVE
+========================= */
+
+
+/* большие планшеты */
+@media (max-width: 1100px) {
+
+  .product-page {
+    max-width: 900px;
+    padding: 15px;
+  }
+
+
+  .main-image img {
+    height: 380px;
+  }
+
+
+  .product-body .search {
+    width: 300px;
+  }
+
+}
+
+
+/* планшеты */
+
+@media (max-width: 768px) {
+
+
+  .product-page {
+    width: 100%;
+    padding: 12px;
+    margin: 10px auto;
+  }
+
+
+  .product-hero h1 {
+    font-size: 24px;
+  }
+
+
+  .main-image img {
+    height: 300px;
+  }
+
+
+
+  .product-body .header {
+
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 10px;
+
+  }
+
+
+  .product-body .logo-wrap {
+
+    width: 100%;
+    justify-content: center;
+
+  }
+
+
+
+  .product-body .search-box {
+
+    width: 100%;
+
+  }
+
+
+
+  .product-body .search {
+
+    width: 100%;
+    min-width: 0;
+
+  }
+
+
+
+  .product-body .search-btn {
+
+    flex-shrink: 0;
+
+  }
+
+
+
+  .product-body .nav {
+
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+  }
+
+
+
+  .product-body .header-right {
+
+    width: 100%;
+    align-items: center;
+
+  }
+
+
+}
+
+
+/* телефоны */
+
+@media (max-width: 600px) {
+
+
+  .main-image img {
+
+    height: 240px;
+
+  }
+
+
+
+  .product-info {
+
+    padding: 15px;
+
+  }
+
+
+
+  .description {
+
+    font-size: 14px;
+
+  }
+
+
+
+  .thumbnails {
+
+    gap: 8px;
+
+  }
+
+
+
+  .thumbnails img {
+
+    width: 55px;
+    height: 55px;
+
+  }
+
+
+
+  .product-info button,
+  .whatsapp-btn {
+
+    font-size: 14px;
+
+  }
+
+
+}
+
+
+/* маленькие телефоны */
+
+@media (max-width: 380px) {
+
+
+  .product-hero h1 {
+
+    font-size: 20px;
+
+  }
+
+
+
+  .main-image img {
+
+    height: 200px;
+
+  }
+
+
+
+  .thumbnails img {
+
+    width: 48px;
+    height: 48px;
+
+  }
+
+
+  .product-body .nav {
+
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+}
