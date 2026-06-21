@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://senseizakir.github.io/BeautyHome/sitemap.xml
