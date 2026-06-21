@@ -111,10 +111,7 @@ const whatsappNumber =
 const whatsappUrl =
 `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-window.open(
-  whatsappUrl,
-  "_blank"
-);
+window.location.href = whatsappUrl;
 
 
         result.innerHTML = `
